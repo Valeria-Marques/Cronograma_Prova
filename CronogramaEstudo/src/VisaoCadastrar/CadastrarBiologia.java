@@ -2,7 +2,7 @@ package VisaoCadastrar;
 import DAO.BiologiaDAO;
 import DAO.Conexao;
 import Modelo.Biologia;
-import Principal.Cronograma;
+import Principal.Opcoes;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +56,7 @@ public class CadastrarBiologia extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(280, 110, 90, 40);
 
-        cancelar.setBackground(new java.awt.Color(255, 255, 255));
+        cancelar.setBackground(new java.awt.Color(204, 0, 0));
         cancelar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cancelar.setText("CANCELAR");
         cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +67,7 @@ public class CadastrarBiologia extends javax.swing.JFrame {
         getContentPane().add(cancelar);
         cancelar.setBounds(600, 260, 120, 40);
 
-        salvar.setBackground(new java.awt.Color(255, 255, 255));
+        salvar.setBackground(new java.awt.Color(0, 153, 0));
         salvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         salvar.setText("SALVAR");
         salvar.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,8 @@ public class CadastrarBiologia extends javax.swing.JFrame {
     }//GEN-LAST:event_conteudoActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
-        
+    new Opcoes().setVisible(true);
+    dispose();
     }//GEN-LAST:event_cancelarActionPerformed
 
     private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
@@ -147,10 +148,10 @@ public class CadastrarBiologia extends javax.swing.JFrame {
             b.setHora(h);
             sql.InserirBiologia(b);
             Conexao.FecharConexao(con);
-            JOptionPane.showMessageDialog(null, "Cadastro concluido!", "Video Locadora", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Cadastro concluido!", "Cronograma", JOptionPane.INFORMATION_MESSAGE);
         }
         dispose();
-        new Cronograma().setVisible(true);
+        new Opcoes().setVisible(true);
     }//GEN-LAST:event_salvarActionPerformed
 
     /**
