@@ -1,16 +1,18 @@
 package VisaoCadastrar;
+import DAO.Conexao;
+import DAO.EdDAO;
+import Modelo.Ed;
+import Principal.Opcoes;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
+public class CadastrarEd extends javax.swing.JFrame {
 
-public class Espanhol extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Portugues
-     */
-    public Espanhol() {
+    public CadastrarEd() {
         initComponents();
         setSize(781,410);
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -19,13 +21,13 @@ public class Espanhol extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        hora = new javax.swing.JTextField();
         cancelar = new javax.swing.JButton();
         salvar = new javax.swing.JButton();
         conteudo = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        data = new javax.swing.JFormattedTextField();
+        hora = new javax.swing.JFormattedTextField();
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -34,7 +36,7 @@ public class Espanhol extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ESPANHOL");
+        jLabel1.setText("Ed. Fisica");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(240, 30, 290, 50);
         getContentPane().add(jSeparator1);
@@ -45,24 +47,16 @@ public class Espanhol extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("HORA:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(370, 250, 60, 40);
+        jLabel2.setBounds(380, 250, 60, 40);
 
         jLabel5.setBackground(new java.awt.Color(102, 102, 102));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("INFORMAR:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(260, 120, 90, 40);
+        jLabel5.setBounds(280, 110, 90, 40);
 
-        hora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                horaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(hora);
-        hora.setBounds(440, 250, 70, 40);
-
-        cancelar.setBackground(new java.awt.Color(255, 255, 255));
+        cancelar.setBackground(new java.awt.Color(204, 0, 0));
         cancelar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cancelar.setText("CANCELAR");
         cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -71,13 +65,18 @@ public class Espanhol extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cancelar);
-        cancelar.setBounds(590, 280, 120, 40);
+        cancelar.setBounds(600, 260, 120, 40);
 
-        salvar.setBackground(new java.awt.Color(255, 255, 255));
+        salvar.setBackground(new java.awt.Color(0, 153, 0));
         salvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         salvar.setText("SALVAR");
+        salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarActionPerformed(evt);
+            }
+        });
         getContentPane().add(salvar);
-        salvar.setBounds(590, 190, 120, 40);
+        salvar.setBounds(600, 170, 120, 40);
 
         conteudo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +84,7 @@ public class Espanhol extends javax.swing.JFrame {
             }
         });
         getContentPane().add(conteudo);
-        conteudo.setBounds(150, 170, 360, 40);
+        conteudo.setBounds(160, 170, 400, 40);
 
         jLabel8.setBackground(new java.awt.Color(102, 102, 102));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -102,12 +101,20 @@ public class Espanhol extends javax.swing.JFrame {
         jLabel6.setBounds(70, 250, 50, 40);
 
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(150, 250, 200, 40);
+        getContentPane().add(data);
+        data.setBounds(160, 250, 200, 40);
+
+        try {
+            hora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        getContentPane().add(hora);
+        hora.setBounds(450, 240, 100, 50);
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(102, 102, 102));
@@ -117,17 +124,35 @@ public class Espanhol extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void horaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_horaActionPerformed
-
     private void conteudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conteudoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_conteudoActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
-
+    new Opcoes().setVisible(true);
+    dispose();
     }//GEN-LAST:event_cancelarActionPerformed
+
+    private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
+       String nome = conteudo.getText();
+       String dat = data.getText();
+       String h = hora.getText();
+       if (conteudo.equals("") || data.equals("") || hora.equals("")) {
+               JOptionPane.showMessageDialog(null, "Nenhum campo pode está vazio.", "Cronograma", JOptionPane.WARNING_MESSAGE);
+        } else {
+            Connection con = Conexao.AbrirConexao();
+            EdDAO sql = new EdDAO(con);
+            Ed e = new Ed();
+            e.setConteudo(nome);
+            e.setData(dat);
+            e.setHora(h);
+            sql.InserirEd(e);
+            Conexao.FecharConexao(con);
+            JOptionPane.showMessageDialog(null, "Cadastro concluido!", "Cronograma", JOptionPane.INFORMATION_MESSAGE);
+        }
+        dispose();
+        new Opcoes().setVisible(true);
+    }//GEN-LAST:event_salvarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,7 +185,7 @@ public class Espanhol extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Portugues().setVisible(true);
+                new CadastrarEd().setVisible(true);
             }
         });
     }
@@ -168,8 +193,8 @@ public class Espanhol extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelar;
     private javax.swing.JTextField conteudo;
-    private javax.swing.JTextField hora;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField data;
+    private javax.swing.JFormattedTextField hora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
@@ -179,4 +204,6 @@ public class Espanhol extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton salvar;
     // End of variables declaration//GEN-END:variables
+
+    
 }
