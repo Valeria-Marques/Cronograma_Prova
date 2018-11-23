@@ -1,17 +1,17 @@
 package Principal;
-import VisaoCadastrar.Ed;
-import VisaoCadastrar.Espanhol;
-import VisaoCadastrar.Filosofia;
-import VisaoCadastrar.Fisica;
-import VisaoCadastrar.Geografia;
-import VisaoCadastrar.Historia;
-import VisaoCadastrar.Ingles;
-import VisaoCadastrar.Matematica;
-import VisaoCadastrar.Php;
-import VisaoCadastrar.Portugues;
-import VisaoCadastrar.Quimica;
-import VisaoCadastrar.Redes;
-import VisaoCadastrar.Sociologia;
+import VisaoConsultar.ConsultarEd;
+import VisaoConsultar.ConsultarEspanhol;
+import VisaoConsultar.ConsultarFilosofia;
+import VisaoConsultar.ConsultarFisica;
+import VisaoConsultar.ConsultarGeografia;
+import VisaoConsultar.ConsultarHistoria;
+import VisaoConsultar.ConsultarIngles;
+import VisaoConsultar.ConsultarMatematica;
+import VisaoConsultar.ConsultarPhp;
+import VisaoConsultar.ConsultarPortugues;
+import VisaoConsultar.ConsultarQuimica;
+import VisaoConsultar.ConsultarRedes;
+import VisaoConsultar.ConsultarSociologia;
 import VisaoConsultar.ConsultarBanco;
 import VisaoConsultar.ConsultarBiologia;
 import java.net.URL;
@@ -149,16 +149,16 @@ public class CronogramaConsultar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if(op == 1){
-             new Historia().setVisible(true); 
+             new ConsultarHistoria().setVisible(true); 
            dispose();
         }if(op == 2){
-             new Geografia().setVisible(true); 
+             new ConsultarGeografia().setVisible(true); 
            dispose();
         }if(op == 3){
-             new Filosofia().setVisible(true); 
+             new ConsultarFilosofia().setVisible(true); 
            dispose();
         }if(op == 4){
-            new Sociologia().setVisible(true); 
+            new ConsultarSociologia().setVisible(true); 
            dispose();
         }
     }//GEN-LAST:event_humanasActionPerformed
@@ -176,10 +176,10 @@ public class CronogramaConsultar extends javax.swing.JFrame {
           new ConsultarBanco().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Php().setVisible(true);
+          new ConsultarPhp().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Redes().setVisible(true);
+            new ConsultarRedes().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_cursoActionPerformed
@@ -190,18 +190,18 @@ public class CronogramaConsultar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-          new Portugues().setVisible(true);
+          new ConsultarPortugues().setVisible(true);
           dispose();
           
       }else if(op == 2){
-          new Ingles().setVisible(true);
+          new ConsultarIngles().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Espanhol().setVisible(true);
+            new ConsultarEspanhol().setVisible(true);
           dispose();
       }
       else if(op == 4){
-            new Ed().setVisible(true);
+            new ConsultarEd().setVisible(true);
           dispose();
       }
       
@@ -213,10 +213,10 @@ public class CronogramaConsultar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-         new Fisica().setVisible(true);
+         new ConsultarFisica().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Quimica().setVisible(true);
+          new ConsultarQuimica().setVisible(true);
         dispose();
       }else if(op == 3){
             new ConsultarBiologia().setVisible(true);
@@ -230,7 +230,7 @@ public class CronogramaConsultar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else  if (op == 1){
-          new Matematica().setVisible(true);
+          new ConsultarMatematica().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_matematicaActionPerformed

@@ -3,7 +3,6 @@ import DAO.Conexao;
 import DAO.EspanholDAO;
 import Modelo.Espanhol;
 import Principal.Opcoes;
-import VisaoCadastrar.Portugues;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,7 +81,7 @@ public class ConsultarEspanhol extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Ed. Fisica");
+        jLabel1.setText("Espanhol");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(30, 20, 290, 50);
         getContentPane().add(jSeparator1);
@@ -253,13 +252,13 @@ public class ConsultarEspanhol extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Portugues.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Espanhol.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Portugues.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Espanhol.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Portugues.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Espanhol.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Portugues.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Espanhol.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

@@ -1,19 +1,10 @@
 package Principal;
-import VisaoCadastrar.Ed;
-import VisaoCadastrar.Espanhol;
-import VisaoCadastrar.Filosofia;
-import VisaoCadastrar.Fisica;
-import VisaoCadastrar.Geografia;
-import VisaoCadastrar.Historia;
-import VisaoCadastrar.Ingles;
-import VisaoCadastrar.Matematica;
-import VisaoCadastrar.Php;
-import VisaoCadastrar.Portugues;
-import VisaoCadastrar.Quimica;
-import VisaoCadastrar.Redes;
-import VisaoCadastrar.Sociologia;
 import VisaoExcluir.ExcluirBanco;
 import VisaoExcluir.ExcluirBiologia;
+import VisaoExcluir.ExcluirEd;
+import VisaoExcluir.ExcluirEspanhol;
+import VisaoExcluir.ExcluirFilosofia;
+import VisaoExcluir.ExcluirFisica;
 import javax.swing.JOptionPane;
 
 public class CronogramaExcluir extends javax.swing.JFrame {
@@ -148,16 +139,16 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if(op == 1){
-             new Historia().setVisible(true); 
+           //  new ExcluirHistoria().setVisible(true); 
            dispose();
         }if(op == 2){
-             new Geografia().setVisible(true); 
+         //    new ExcluirGeografia().setVisible(true); 
            dispose();
         }if(op == 3){
-             new Filosofia().setVisible(true); 
+             new ExcluirFilosofia().setVisible(true); 
            dispose();
         }if(op == 4){
-            new Sociologia().setVisible(true); 
+      //      new ExcluirSociologia().setVisible(true); 
            dispose();
         }
     }//GEN-LAST:event_humanasActionPerformed
@@ -175,10 +166,10 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           new ExcluirBanco().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Php().setVisible(true);
+         // new ExcluirPhp().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Redes().setVisible(true);
+        //    new ExcluirRedes().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_cursoActionPerformed
@@ -189,18 +180,18 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-          new Portugues().setVisible(true);
+       //   new ExcluirPortugues().setVisible(true);
           dispose();
           
       }else if(op == 2){
-          new Ingles().setVisible(true);
+       //   new ExcluirIngles().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Espanhol().setVisible(true);
+            new ExcluirEspanhol().setVisible(true);
           dispose();
       }
       else if(op == 4){
-            new Ed().setVisible(true);
+            new ExcluirEd().setVisible(true);
           dispose();
       }
       
@@ -212,10 +203,10 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-         new Fisica().setVisible(true);
+         new ExcluirFisica().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Quimica().setVisible(true);
+        //  new ExcluirQuimica().setVisible(true);
         dispose();
       }else if(op == 3){
             new ExcluirBiologia().setVisible(true);
@@ -229,7 +220,7 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else  if (op == 1){
-          new Matematica().setVisible(true);
+        //  new ExcluirMatematica().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_matematicaActionPerformed

@@ -1,19 +1,19 @@
 package Principal;
 import VisaoCadastrar.CadastrarBanco;
 import VisaoCadastrar.CadastrarBiologia;
-import VisaoCadastrar.Ed;
-import VisaoCadastrar.Espanhol;
-import VisaoCadastrar.Filosofia;
-import VisaoCadastrar.Fisica;
-import VisaoCadastrar.Geografia;
-import VisaoCadastrar.Historia;
-import VisaoCadastrar.Ingles;
-import VisaoCadastrar.Matematica;
-import VisaoCadastrar.Php;
-import VisaoCadastrar.Portugues;
-import VisaoCadastrar.Quimica;
-import VisaoCadastrar.Redes;
-import VisaoCadastrar.Sociologia;
+import VisaoCadastrar.CadastrarEd;
+import VisaoCadastrar.CadastrarEspanhol;
+import VisaoCadastrar.CadastrarFilosofia;
+import VisaoCadastrar.CadastrarFisica;
+import VisaoCadastrar.CadastrarGeografia;
+import VisaoCadastrar.CadastrarHistoria;
+import VisaoCadastrar.CadastrarIngles;
+import VisaoCadastrar.CadastrarMatematica;
+import VisaoCadastrar.CadastrarPhp;
+import VisaoCadastrar.CadastrarPortugues;
+import VisaoCadastrar.CadastrarQuimica;
+import VisaoCadastrar.CadastrarRedes;
+import VisaoCadastrar.CadastrarSociologia;
 import java.net.URL;
 import javax.swing.JOptionPane;
 
@@ -149,16 +149,16 @@ public class CronogramaCadastrar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if(op == 1){
-             new Historia().setVisible(true); 
+             new CadastrarHistoria().setVisible(true); 
            dispose();
         }if(op == 2){
-             new Geografia().setVisible(true); 
+             new CadastrarGeografia().setVisible(true); 
            dispose();
         }if(op == 3){
-             new Filosofia().setVisible(true); 
+             new CadastrarFilosofia().setVisible(true); 
            dispose();
         }if(op == 4){
-            new Sociologia().setVisible(true); 
+            new CadastrarSociologia().setVisible(true); 
            dispose();
         }
     }//GEN-LAST:event_humanasActionPerformed
@@ -176,10 +176,10 @@ public class CronogramaCadastrar extends javax.swing.JFrame {
           new CadastrarBanco().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Php().setVisible(true);
+          new CadastrarPhp().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Redes().setVisible(true);
+            new CadastrarRedes().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_cursoActionPerformed
@@ -190,18 +190,18 @@ public class CronogramaCadastrar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-          new Portugues().setVisible(true);
+          new CadastrarPortugues().setVisible(true);
           dispose();
           
       }else if(op == 2){
-          new Ingles().setVisible(true);
+          new CadastrarIngles().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Espanhol().setVisible(true);
+            new CadastrarEspanhol().setVisible(true);
           dispose();
       }
       else if(op == 4){
-            new Ed().setVisible(true);
+            new CadastrarEd().setVisible(true);
           dispose();
       }
       
@@ -213,10 +213,10 @@ public class CronogramaCadastrar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-         new Fisica().setVisible(true);
+         new CadastrarFisica().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Quimica().setVisible(true);
+          new CadastrarQuimica().setVisible(true);
         dispose();
       }else if(op == 3){
             new CadastrarBiologia().setVisible(true);
@@ -230,7 +230,7 @@ public class CronogramaCadastrar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else  if (op == 1){
-          new Matematica().setVisible(true);
+          new CadastrarMatematica().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_matematicaActionPerformed

@@ -1,19 +1,20 @@
 package Principal;
 import VisaoAlterar.AlterarBanco;
 import VisaoAlterar.AlterarBiologia;
-import VisaoCadastrar.Ed;
-import VisaoCadastrar.Espanhol;
-import VisaoCadastrar.Filosofia;
-import VisaoCadastrar.Fisica;
-import VisaoCadastrar.Geografia;
-import VisaoCadastrar.Historia;
-import VisaoCadastrar.Ingles;
-import VisaoCadastrar.Matematica;
-import VisaoCadastrar.Php;
-import VisaoCadastrar.Portugues;
-import VisaoCadastrar.Quimica;
-import VisaoCadastrar.Redes;
-import VisaoCadastrar.Sociologia;
+import VisaoAlterar.AlterarEd;
+import VisaoAlterar.AlterarEspanhol;
+import VisaoAlterar.AlterarFilosofia;
+import VisaoAlterar.AlterarFisica;
+import VisaoAlterar.AlterarGeografia;
+import VisaoAlterar.AlterarHistoria;
+import VisaoAlterar.AlterarIngles;
+import VisaoAlterar.AlterarMatematica;
+import VisaoAlterar.AlterarPhp;
+import VisaoAlterar.AlterarPortugues;
+import VisaoAlterar.AlterarQuimica;
+import VisaoAlterar.AlterarRedes;
+import VisaoAlterar.AlterarSociologia;
+
 import javax.swing.JOptionPane;
 
 public class CronogramaEditar extends javax.swing.JFrame {
@@ -148,16 +149,16 @@ public class CronogramaEditar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if(op == 1){
-             new Historia().setVisible(true); 
+             new AlterarHistoria().setVisible(true); 
            dispose();
         }if(op == 2){
-             new Geografia().setVisible(true); 
+             new AlterarGeografia().setVisible(true); 
            dispose();
         }if(op == 3){
-             new Filosofia().setVisible(true); 
+             new AlterarFilosofia().setVisible(true); 
            dispose();
         }if(op == 4){
-            new Sociologia().setVisible(true); 
+            new AlterarSociologia().setVisible(true); 
            dispose();
         }
     }//GEN-LAST:event_humanasActionPerformed
@@ -175,10 +176,10 @@ public class CronogramaEditar extends javax.swing.JFrame {
          new AlterarBanco().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Php().setVisible(true);
+          new AlterarPhp().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Redes().setVisible(true);
+            new AlterarRedes().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_cursoActionPerformed
@@ -189,18 +190,18 @@ public class CronogramaEditar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-          new Portugues().setVisible(true);
+          new AlterarPortugues().setVisible(true);
           dispose();
           
       }else if(op == 2){
-          new Ingles().setVisible(true);
+          new AlterarIngles().setVisible(true);
         dispose();
       }else if(op == 3){
-            new Espanhol().setVisible(true);
+            new AlterarEspanhol().setVisible(true);
           dispose();
       }
       else if(op == 4){
-            new Ed().setVisible(true);
+            new AlterarEd().setVisible(true);
           dispose();
       }
       
@@ -212,10 +213,10 @@ public class CronogramaEditar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-         new Fisica().setVisible(true);
+         new AlterarFisica().setVisible(true);
           dispose();
       }else if(op == 2){
-          new Quimica().setVisible(true);
+          new AlterarQuimica().setVisible(true);
         dispose();
       }else if(op == 3){
             new AlterarBiologia().setVisible(true);
@@ -229,7 +230,7 @@ public class CronogramaEditar extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else  if (op == 1){
-          new Matematica().setVisible(true);
+          new AlterarMatematica().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_matematicaActionPerformed
