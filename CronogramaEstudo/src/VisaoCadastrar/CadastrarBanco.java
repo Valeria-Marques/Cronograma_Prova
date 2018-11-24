@@ -23,10 +23,10 @@ public class CadastrarBanco extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         cancelar = new javax.swing.JButton();
         salvar = new javax.swing.JButton();
-        conteudo = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         data = new javax.swing.JFormattedTextField();
+        conteudo = new javax.swing.JTextField();
         hora = new javax.swing.JFormattedTextField();
         jTextField1 = new javax.swing.JTextField();
 
@@ -78,14 +78,6 @@ public class CadastrarBanco extends javax.swing.JFrame {
         getContentPane().add(salvar);
         salvar.setBounds(600, 170, 120, 40);
 
-        conteudo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                conteudoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(conteudo);
-        conteudo.setBounds(160, 170, 400, 40);
-
         jLabel8.setBackground(new java.awt.Color(102, 102, 102));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -108,6 +100,14 @@ public class CadastrarBanco extends javax.swing.JFrame {
         getContentPane().add(data);
         data.setBounds(160, 250, 200, 40);
 
+        conteudo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conteudoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(conteudo);
+        conteudo.setBounds(160, 170, 400, 40);
+
         try {
             hora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
@@ -123,10 +123,6 @@ public class CadastrarBanco extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void conteudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conteudoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_conteudoActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
    new Opcoes().setVisible(true);
@@ -153,6 +149,10 @@ public class CadastrarBanco extends javax.swing.JFrame {
         new Opcoes().setVisible(true);
         dispose();
     }//GEN-LAST:event_salvarActionPerformed
+
+    private void conteudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conteudoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_conteudoActionPerformed
 
     /**
      * @param args the command line arguments

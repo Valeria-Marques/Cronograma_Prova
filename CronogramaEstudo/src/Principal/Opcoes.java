@@ -22,6 +22,7 @@ public class Opcoes extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         salvar = new javax.swing.JButton();
+        salvar1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
 
@@ -81,7 +82,7 @@ public class Opcoes extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(400, 160, 140, 30);
 
-        salvar.setBackground(new java.awt.Color(255, 255, 255));
+        salvar.setBackground(new java.awt.Color(255, 255, 0));
         salvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         salvar.setText("SAIR");
         salvar.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +91,18 @@ public class Opcoes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar);
-        salvar.setBounds(320, 280, 120, 40);
+        salvar.setBounds(150, 280, 120, 40);
+
+        salvar1.setBackground(new java.awt.Color(0, 255, 204));
+        salvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        salvar1.setText("Informações");
+        salvar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(salvar1);
+        salvar1.setBounds(480, 280, 130, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/produtos-de-informatica.png"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -136,6 +148,11 @@ public class Opcoes extends javax.swing.JFrame {
         new CronogramaExcluir().setVisible(true);
      dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvar1ActionPerformed
+        new Informacoes().setVisible(true);
+     dispose();
+    }//GEN-LAST:event_salvar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,5 +200,6 @@ public class Opcoes extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton salvar;
+    private javax.swing.JButton salvar1;
     // End of variables declaration//GEN-END:variables
 }

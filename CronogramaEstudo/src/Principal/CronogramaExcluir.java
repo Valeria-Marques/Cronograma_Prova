@@ -5,6 +5,15 @@ import VisaoExcluir.ExcluirEd;
 import VisaoExcluir.ExcluirEspanhol;
 import VisaoExcluir.ExcluirFilosofia;
 import VisaoExcluir.ExcluirFisica;
+import VisaoExcluir.ExcluirGeografia;
+import VisaoExcluir.ExcluirHistoria;
+import VisaoExcluir.ExcluirIngles;
+import VisaoExcluir.ExcluirMatematica;
+import VisaoExcluir.ExcluirPhp;
+import VisaoExcluir.ExcluirPortugues;
+import VisaoExcluir.ExcluirQuimica;
+import VisaoExcluir.ExcluirRedes;
+import VisaoExcluir.ExcluirSociologia;
 import javax.swing.JOptionPane;
 
 public class CronogramaExcluir extends javax.swing.JFrame {
@@ -139,16 +148,16 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if(op == 1){
-           //  new ExcluirHistoria().setVisible(true); 
+           new ExcluirHistoria().setVisible(true); 
            dispose();
         }if(op == 2){
-         //    new ExcluirGeografia().setVisible(true); 
+           new ExcluirGeografia().setVisible(true); 
            dispose();
         }if(op == 3){
              new ExcluirFilosofia().setVisible(true); 
            dispose();
         }if(op == 4){
-      //      new ExcluirSociologia().setVisible(true); 
+         new ExcluirSociologia().setVisible(true); 
            dispose();
         }
     }//GEN-LAST:event_humanasActionPerformed
@@ -166,10 +175,10 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           new ExcluirBanco().setVisible(true);
           dispose();
       }else if(op == 2){
-         // new ExcluirPhp().setVisible(true);
+         new ExcluirPhp().setVisible(true);
         dispose();
       }else if(op == 3){
-        //    new ExcluirRedes().setVisible(true);
+          new ExcluirRedes().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_cursoActionPerformed
@@ -180,11 +189,11 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else if (op == 1){
-       //   new ExcluirPortugues().setVisible(true);
+       new ExcluirPortugues().setVisible(true);
           dispose();
           
       }else if(op == 2){
-       //   new ExcluirIngles().setVisible(true);
+          new ExcluirIngles().setVisible(true);
         dispose();
       }else if(op == 3){
             new ExcluirEspanhol().setVisible(true);
@@ -206,7 +215,7 @@ public class CronogramaExcluir extends javax.swing.JFrame {
          new ExcluirFisica().setVisible(true);
           dispose();
       }else if(op == 2){
-        //  new ExcluirQuimica().setVisible(true);
+         new ExcluirQuimica().setVisible(true);
         dispose();
       }else if(op == 3){
             new ExcluirBiologia().setVisible(true);
@@ -220,7 +229,7 @@ public class CronogramaExcluir extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(rootPane, "ESCOLHA UMA OPÇÃO", "ALERTA!", JOptionPane.ERROR_MESSAGE, null);
       }
       else  if (op == 1){
-        //  new ExcluirMatematica().setVisible(true);
+          new ExcluirMatematica().setVisible(true);
           dispose();
       }
     }//GEN-LAST:event_matematicaActionPerformed

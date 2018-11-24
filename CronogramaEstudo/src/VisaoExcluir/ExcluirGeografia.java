@@ -1,8 +1,8 @@
 package VisaoExcluir;
 import VisaoCadastrar.*;
 import DAO.Conexao;
-import DAO.FisicaDAO;
-import Modelo.Fisica;
+import DAO.GeografiaDAO;
+import Modelo.Geografia;
 import Principal.Opcoes;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -17,11 +17,11 @@ public class ExcluirGeografia extends javax.swing.JFrame {
     }
     private void AtualizarCombo(){
     Connection con = Conexao.AbrirConexao();
-    FisicaDAO sql = new FisicaDAO(con);
-    List<Fisica> lista = new ArrayList<>();
-    lista =  sql.ListarComboFisica();
-    for(Fisica f : lista){
-       ComboBio.addItem(f.getConteudo()); 
+    GeografiaDAO sql = new GeografiaDAO(con);
+    List<Geografia> lista = new ArrayList<>();
+    lista =  sql.ListarComboGeografia();
+    for(Geografia g : lista){
+       ComboBio.addItem(g.getConteudo()); 
     }
     Conexao.FecharConexao(con);
     }
@@ -45,7 +45,7 @@ public class ExcluirGeografia extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Excluir Fisica");
+        jLabel1.setText("Excluir Geografia");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(240, 30, 290, 50);
         getContentPane().add(jSeparator1);
@@ -119,8 +119,8 @@ public class ExcluirGeografia extends javax.swing.JFrame {
     String nome = ComboBio.getSelectedItem().toString();
     
     Connection con = Conexao.AbrirConexao();
-    FisicaDAO sql = new FisicaDAO(con);
-    Fisica f = new Fisica();
+    GeografiaDAO sql = new GeografiaDAO(con);
+    Geografia g = new Geografia();
     
     if(nome.equals("")){
         JOptionPane.showMessageDialog(null,"Nenhum Nome Selecionado","Cronograma",JOptionPane.WARNING_MESSAGE);
@@ -129,9 +129,9 @@ public class ExcluirGeografia extends javax.swing.JFrame {
         ,JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if(bio == 0){
             int cod = Integer.parseInt(codigo);
-            f.setConteudo(nome);
-            f.setId(cod);
-            sql.ExcluirFisica(f);
+            g.setConteudo(nome);
+            g.setId(cod);
+            sql.ExcluirGeografia(g);
             Conexao.FecharConexao(con);
             dispose();
         }
@@ -142,13 +142,13 @@ public class ExcluirGeografia extends javax.swing.JFrame {
 
     private void ComboBioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBioActionPerformed
     Connection con = Conexao.AbrirConexao();
-    FisicaDAO sql = new FisicaDAO(con);
-    List<Fisica> lista = new ArrayList<>();
+    GeografiaDAO sql = new GeografiaDAO(con);
+    List<Geografia> lista = new ArrayList<>();
     String nome = ComboBio.getSelectedItem().toString();
     
-    lista = sql.ConsultaCodigoFisica(nome);
+    lista = sql.ConsultaCodigoGeografia(nome);
     
-    for(Fisica e: lista){
+    for(Geografia e: lista){
         int a = e.getId();
         Cod.setText("" + a);    
     }
@@ -172,13 +172,13 @@ public class ExcluirGeografia extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Fisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Geografia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Fisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Geografia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Fisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Geografia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Fisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Geografia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
