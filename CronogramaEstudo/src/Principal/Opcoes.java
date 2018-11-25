@@ -47,7 +47,7 @@ public class Opcoes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(580, 160, 140, 30);
+        jButton1.setBounds(600, 160, 140, 30);
 
         jButton2.setBackground(new java.awt.Color(0, 153, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N

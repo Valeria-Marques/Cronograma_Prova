@@ -14,6 +14,7 @@ import VisaoConsultar.ConsultarRedes;
 import VisaoConsultar.ConsultarSociologia;
 import VisaoConsultar.ConsultarBanco;
 import VisaoConsultar.ConsultarBiologia;
+import VisaoConsultar.ConsultarFuncionario;
 import java.net.URL;
 import javax.swing.JOptionPane;
 
@@ -37,6 +38,7 @@ public class CronogramaConsultar extends javax.swing.JFrame {
         humanas = new javax.swing.JComboBox<>();
         curso = new javax.swing.JComboBox<>();
         linguagem = new javax.swing.JComboBox<>();
+        salvar4 = new javax.swing.JButton();
         natureza = new javax.swing.JComboBox<>();
         matematica = new javax.swing.JComboBox<>();
         salvar = new javax.swing.JButton();
@@ -91,6 +93,17 @@ public class CronogramaConsultar extends javax.swing.JFrame {
         getContentPane().add(linguagem);
         linguagem.setBounds(20, 110, 140, 23);
 
+        salvar4.setBackground(new java.awt.Color(0, 0, 204));
+        salvar4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        salvar4.setText("Usuario");
+        salvar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvar4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(salvar4);
+        salvar4.setBounds(160, 280, 120, 40);
+
         natureza.setBackground(new java.awt.Color(102, 102, 102));
         natureza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         natureza.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,7 +137,7 @@ public class CronogramaConsultar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar);
-        salvar.setBounds(330, 280, 120, 40);
+        salvar.setBounds(500, 270, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/produtos-de-informatica.png"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -240,6 +253,11 @@ public class CronogramaConsultar extends javax.swing.JFrame {
     dispose();
     }//GEN-LAST:event_salvarActionPerformed
 
+    private void salvar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvar4ActionPerformed
+        new ConsultarFuncionario().setVisible(true);
+    dispose();
+    }//GEN-LAST:event_salvar4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -287,5 +305,9 @@ public class CronogramaConsultar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> matematica;
     private javax.swing.JComboBox<String> natureza;
     private javax.swing.JButton salvar;
+    private javax.swing.JButton salvar1;
+    private javax.swing.JButton salvar2;
+    private javax.swing.JButton salvar3;
+    private javax.swing.JButton salvar4;
     // End of variables declaration//GEN-END:variables
 }

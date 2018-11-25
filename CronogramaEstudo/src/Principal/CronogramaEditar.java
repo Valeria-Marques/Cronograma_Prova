@@ -5,6 +5,7 @@ import VisaoAlterar.AlterarEd;
 import VisaoAlterar.AlterarEspanhol;
 import VisaoAlterar.AlterarFilosofia;
 import VisaoAlterar.AlterarFisica;
+import VisaoAlterar.AlterarFuncionario;
 import VisaoAlterar.AlterarGeografia;
 import VisaoAlterar.AlterarHistoria;
 import VisaoAlterar.AlterarIngles;
@@ -39,6 +40,7 @@ public class CronogramaEditar extends javax.swing.JFrame {
         linguagem = new javax.swing.JComboBox<>();
         natureza = new javax.swing.JComboBox<>();
         matematica = new javax.swing.JComboBox<>();
+        salvar1 = new javax.swing.JButton();
         salvar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -115,6 +117,17 @@ public class CronogramaEditar extends javax.swing.JFrame {
         getContentPane().add(matematica);
         matematica.setBounds(470, 110, 140, 23);
 
+        salvar1.setBackground(new java.awt.Color(0, 0, 204));
+        salvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        salvar1.setText("Usuario");
+        salvar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(salvar1);
+        salvar1.setBounds(140, 270, 120, 40);
+
         salvar.setBackground(new java.awt.Color(102, 102, 102));
         salvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         salvar.setText("VOLTAR");
@@ -124,7 +137,7 @@ public class CronogramaEditar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar);
-        salvar.setBounds(330, 270, 120, 40);
+        salvar.setBounds(490, 270, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/produtos-de-informatica.png"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -240,6 +253,11 @@ public class CronogramaEditar extends javax.swing.JFrame {
     dispose();
     }//GEN-LAST:event_salvarActionPerformed
 
+    private void salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvar1ActionPerformed
+        new AlterarFuncionario().setVisible(true);
+    dispose();
+    }//GEN-LAST:event_salvar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -289,5 +307,6 @@ public class CronogramaEditar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> matematica;
     private javax.swing.JComboBox<String> natureza;
     private javax.swing.JButton salvar;
+    private javax.swing.JButton salvar1;
     // End of variables declaration//GEN-END:variables
 }

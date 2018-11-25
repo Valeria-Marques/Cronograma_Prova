@@ -3,6 +3,7 @@ package Principal;
 
 import DAO.Conexao;
 import DAO.FuncionarioDAO;
+import VisaoCadastrar.CadastrarUsuario;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.net.URL;
@@ -21,6 +22,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        salvar1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         salvar = new javax.swing.JButton();
@@ -34,6 +36,17 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        salvar1.setBackground(new java.awt.Color(0, 0, 204));
+        salvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        salvar1.setText("Cadastrar");
+        salvar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(salvar1);
+        salvar1.setBounds(410, 280, 120, 40);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 82, 780, 10);
 
@@ -53,7 +66,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar);
-        salvar.setBounds(310, 280, 120, 40);
+        salvar.setBounds(210, 280, 120, 40);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Email:");
@@ -127,6 +140,11 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_salvarActionPerformed
 
+    private void salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvar1ActionPerformed
+      new CadastrarUsuario().setVisible(true);
+      dispose();
+    }//GEN-LAST:event_salvar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -172,6 +190,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton salvar;
+    private javax.swing.JButton salvar1;
     private javax.swing.JPasswordField senha;
     // End of variables declaration//GEN-END:variables
 }
