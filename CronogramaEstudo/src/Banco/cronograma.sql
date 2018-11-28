@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Nov-2018 às 22:36
+-- Generation Time: 28-Nov-2018 às 11:37
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -149,7 +149,9 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`id`, `nome`, `login`, `senha`) VALUES
-(1, 'ana', 'ana', 'ana');
+(2, 'admin', 'admin', 'admin'),
+(3, 'Ana Valeria', 'ana', 'ana'),
+(4, 'valzinha', 'val', 'val');
 
 -- --------------------------------------------------------
 
@@ -222,6 +224,13 @@ CREATE TABLE `php` (
   `data` varchar(100) NOT NULL,
   `hora` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `php`
+--
+
+INSERT INTO `php` (`id`, `conteudo`, `data`, `hora`) VALUES
+(1, 'castigo', '26/12/2018', '08:00');
 
 -- --------------------------------------------------------
 
@@ -426,7 +435,7 @@ ALTER TABLE `fisica`
 -- AUTO_INCREMENT for table `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `geografia`
@@ -456,7 +465,7 @@ ALTER TABLE `matematica`
 -- AUTO_INCREMENT for table `php`
 --
 ALTER TABLE `php`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `portugues`

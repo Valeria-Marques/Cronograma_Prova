@@ -17,10 +17,10 @@ public class Opcoes extends javax.swing.JFrame {
 
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        excluir = new javax.swing.JButton();
+        cadastrar = new javax.swing.JButton();
+        consultar = new javax.swing.JButton();
+        editar = new javax.swing.JButton();
         salvar = new javax.swing.JButton();
         salvar1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -38,49 +38,49 @@ public class Opcoes extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(160, 20, 400, 50);
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Excluir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        excluir.setBackground(new java.awt.Color(204, 0, 0));
+        excluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        excluir.setText("Excluir");
+        excluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                excluirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(600, 160, 140, 30);
+        getContentPane().add(excluir);
+        excluir.setBounds(600, 160, 140, 30);
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("Cadastrar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cadastrar.setBackground(new java.awt.Color(0, 153, 0));
+        cadastrar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cadastrar.setText("Cadastrar");
+        cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(20, 160, 140, 30);
+        getContentPane().add(cadastrar);
+        cadastrar.setBounds(20, 160, 140, 30);
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 0));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setText("Consultar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        consultar.setBackground(new java.awt.Color(204, 204, 0));
+        consultar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        consultar.setText("Consultar");
+        consultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                consultarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(200, 160, 140, 30);
+        getContentPane().add(consultar);
+        consultar.setBounds(200, 160, 140, 30);
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setText("Editar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        editar.setBackground(new java.awt.Color(0, 0, 255));
+        editar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        editar.setText("Editar");
+        editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                editarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(400, 160, 140, 30);
+        getContentPane().add(editar);
+        editar.setBounds(400, 160, 140, 30);
 
         salvar.setBackground(new java.awt.Color(255, 255, 0));
         salvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -91,7 +91,7 @@ public class Opcoes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar);
-        salvar.setBounds(150, 280, 120, 40);
+        salvar.setBounds(170, 280, 120, 40);
 
         salvar1.setBackground(new java.awt.Color(0, 255, 204));
         salvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -126,28 +126,29 @@ public class Opcoes extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
- 
+  new Menu().setVisible(true);
+     dispose(); 
     }//GEN-LAST:event_salvarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
      new CronogramaCadastrar().setVisible(true);
      dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_cadastrarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed
        new CronogramaConsultar().setVisible(true);
      dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_consultarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarActionPerformed
        new CronogramaEditar().setVisible(true);
      dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_editarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void excluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirActionPerformed
         new CronogramaExcluir().setVisible(true);
      dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_excluirActionPerformed
 
     private void salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvar1ActionPerformed
         new Informacoes().setVisible(true);
@@ -191,10 +192,10 @@ public class Opcoes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton cadastrar;
+    private javax.swing.JButton consultar;
+    private javax.swing.JButton editar;
+    private javax.swing.JButton excluir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;

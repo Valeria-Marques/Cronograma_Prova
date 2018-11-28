@@ -41,7 +41,7 @@ public class Informacoes extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(50, 150, 690, 90);
+        jScrollPane1.setBounds(40, 120, 630, 100);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -59,11 +59,11 @@ public class Informacoes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar);
-        salvar.setBounds(620, 320, 120, 40);
+        salvar.setBounds(520, 240, 120, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/produtos-de-informatica.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 90, 670, 200);
+        jLabel2.setBounds(50, 90, 650, 200);
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(102, 102, 102));

@@ -45,7 +45,7 @@ public class ExcluirEspanhol extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Excluir Ed. Fisica");
+        jLabel1.setText("Excluir Espanhol");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(240, 30, 290, 50);
         getContentPane().add(jSeparator1);

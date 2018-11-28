@@ -102,7 +102,7 @@ public class CronogramaConsultar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(salvar4);
-        salvar4.setBounds(160, 280, 120, 40);
+        salvar4.setBounds(160, 270, 120, 40);
 
         natureza.setBackground(new java.awt.Color(102, 102, 102));
         natureza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -305,9 +305,6 @@ public class CronogramaConsultar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> matematica;
     private javax.swing.JComboBox<String> natureza;
     private javax.swing.JButton salvar;
-    private javax.swing.JButton salvar1;
-    private javax.swing.JButton salvar2;
-    private javax.swing.JButton salvar3;
     private javax.swing.JButton salvar4;
     // End of variables declaration//GEN-END:variables
 }
