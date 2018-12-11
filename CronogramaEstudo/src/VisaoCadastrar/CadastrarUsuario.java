@@ -4,6 +4,7 @@ import DAO.Conexao;
 import DAO.FuncionarioDAO;
 import Modelo.Banco;
 import Modelo.Funcionario;
+import Principal.Menu;
 import Principal.Opcoes;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -161,7 +162,7 @@ public class CadastrarUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
-   new Opcoes().setVisible(true);
+   new Menu().setVisible(true);
     dispose();        
     }//GEN-LAST:event_cancelarActionPerformed
 
@@ -182,7 +183,7 @@ public class CadastrarUsuario extends javax.swing.JFrame {
             Conexao.FecharConexao(con);
             JOptionPane.showMessageDialog(null, "Cadastro concluido!", "Cronograma", JOptionPane.INFORMATION_MESSAGE);
         }
-        new Opcoes().setVisible(true);
+        new Menu().setVisible(true);
         dispose();
     }//GEN-LAST:event_salvarActionPerformed
 
